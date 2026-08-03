@@ -40,8 +40,7 @@ if (process.env.DATA_BASE_TYPE === 'sql') {
     // Use SQL database connection and routes
 
 try {
-    DbConnectionSql().then(connection => {
-        // Use the connection for queries or pass it to route handlers
+    DbConnectionSql().then(() => {
         app.listen(5000, () => {
             console.log('Server is running on port 5000');
         });
